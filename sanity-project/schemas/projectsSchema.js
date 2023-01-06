@@ -19,6 +19,16 @@ export default {
       type: 'image',
     },
     {
+      name: 'projectImageDesktop',
+      title: 'Project Image Desktop',
+      type: 'image',
+    },
+    {
+      name: 'projectImageMobile',
+      title: 'Project Image Mobile',
+      type: 'image',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'string',

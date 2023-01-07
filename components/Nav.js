@@ -1,16 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
+import Link from "next/link"
 
 export default function Nav() {
+  const [toggleMenu, setToggleMenu] = useState(false)
   return (
-    <nav className="absolute top-6 left-2/4 -translate-x-1/2 font-light text-gray-800 flex justify-between w-5/6 ">
-      <ul className="flex gap-2">
-        <li>About me</li>
-        <li>Projects</li>
-      </ul>
-      <a className="font-bold" href={"#"}>
+    <nav className=" font-light text-gray-700 flex justify-between items-center w-11/12 mx-auto">
+      {/* <ul className="flex gap-2">
+        <li>
+          <a href="#">About me</a>
+        </li>
+        <li>
+          <a href="#">Projects</a>
+        </li>
+        <button>Contact Me</button>
+      </ul> */}
+      <div
+        class={`${toggleMenu ? "change" : "container"}`}
+        onClick={() => setToggleMenu((prev) => !prev)}
+      >
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <Link className="font-bold flex-1" href={"/"}>
         &lt;R. Miller/&gt;
-      </a>
-      <button>Contact Me</button>
+      </Link>
     </nav>
   )
 }

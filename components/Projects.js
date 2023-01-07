@@ -39,7 +39,7 @@ export default function Projects({ projects }) {
                 </a>
               </SkillsButton>
             </li>
-            <li className="font-semibold">
+            <li className="font-semibold ">
               {project?.repo ? (
                 <SkillsButton buttonType="proj">
                   <a target={"_blank"} rel="noreferrer" href={project?.repo}>
@@ -49,7 +49,7 @@ export default function Projects({ projects }) {
               ) : null}
             </li>
 
-            <li className="font-semibold">
+            <li className="font-semibold ">
               <SkillsButton buttonType="proj">Details</SkillsButton>
             </li>
           </ul>

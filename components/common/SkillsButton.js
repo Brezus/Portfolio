@@ -5,8 +5,9 @@ export default function SkillsButton({ children, buttonType = "skills" }) {
     // <button className="cursor-auto font-medium px-5 py-2 bg-gradient-to-r from-lime-500 to-lime-600  text-white text-xs md:text-lg rounded shadow-md">
     //   {children}
     // </button>
-    <div className="relative font-mono">
+    <div className="relative font-mono flex justify-center">
       <button
+        tabIndex={buttonType === "skills" && "-1"}
         className={`${
           buttonType === "skills"
             ? "cursor-auto font-medium px-5 py-2 bg-gradient-to-r from-lime-500 to-lime-600  text-white text-xs md:text-lg rounded shadow-lg"

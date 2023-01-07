@@ -21,11 +21,21 @@ export default function Projects({ projects }) {
             src={urlFor(project.projectImage).url()}
             alt={"project"}
           />
-          <ul className="flex justify-between">
-            <li className="font-semibold">
+          <ul
+            className={`${
+              project?.repo
+                ? "flex justify-between flex-wrap gap-4"
+                : "flex justify-between"
+            }`}
+          >
+            <li
+              className={`${
+                project?.repo ? "font-semibold w-full" : "font-semibold"
+              }`}
+            >
               <SkillsButton buttonType="proj">
                 <a target={"_blank"} rel="noreferrer" href={project?.liveSite}>
-                  Live
+                  Live Site
                 </a>
               </SkillsButton>
             </li>
@@ -49,7 +59,7 @@ export default function Projects({ projects }) {
   })
   return (
     <article
-      className="bg-slate-100 py-8 flex flex-col justify-center items-center gap-6"
+      className="bg-slate-100 py-8 flex flex-col justify-center items-center gap-20"
       id={"projects"}
     >
       <h3 className="font-black text-5xl ">Projects</h3>

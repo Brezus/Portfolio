@@ -33,24 +33,23 @@ export default function Projects({ projects }) {
                 project?.repo ? "font-semibold w-full" : "font-semibold"
               }`}
             >
-              <SkillsButton buttonType="proj">
-                <a target={"_blank"} rel="noreferrer" href={project?.liveSite}>
-                  Live Site
-                </a>
+              <SkillsButton buttonHref={project?.liveSite}>
+                Live Site
               </SkillsButton>
             </li>
-            <li className="font-semibold ">
+            <li className="font-semibold w-2/5">
               {project?.repo ? (
-                <SkillsButton buttonType="proj">
-                  <a target={"_blank"} rel="noreferrer" href={project?.repo}>
-                    Github
-                  </a>
-                </SkillsButton>
+                <SkillsButton buttonHref={project?.repo}>Github</SkillsButton>
               ) : null}
             </li>
 
-            <li className="font-semibold ">
-              <SkillsButton buttonType="proj">Details</SkillsButton>
+            <li className="font-semibold w-2/5">
+              <Link
+                className="duration-300 ease-in relative block -z-neg1 py-3 border-2 border-solid border-slate-900 rounded outline-none before:transition-all before:duration-500 before:ease-in before:absolute before:top-0 before:left-1/2 before:right-1/2 before:bottom-0 before:opacity-0 before:content-[''] before:bg-slate-900 hover:before:transition-all hover:before:duration-500 hover:before:ease-in hover:before:left-0 hover:before:right-0 hover:before:opacity-100 hover:before:z-neg1 hover:text-white hover:font-bold hover:tracking-widest"
+                href={`details`}
+              >
+                Details
+              </Link>
             </li>
           </ul>
         </div>

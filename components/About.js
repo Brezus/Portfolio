@@ -33,7 +33,12 @@ export default function About() {
           <h2 className="font-bold text-2xl text-gray-800">My Skills</h2>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {mySkills.map((skill) => (
-              <SkillsButton key={nanoid()}>{skill}</SkillsButton>
+              <p
+                className="cursor-auto font-medium px-5 py-2 bg-gradient-to-r from-lime-500 to-lime-600  text-white text-xs md:text-lg rounded shadow-lg"
+                key={nanoid()}
+              >
+                {skill}
+              </p>
             ))}
           </div>
         </section>

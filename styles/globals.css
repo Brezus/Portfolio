@@ -22,7 +22,16 @@ a {
 .buttonAnimation {
   color: black;
   padding: 20px 45px;
+  z-index: 100;
+  width: 100%;
+  border: 3px solid black;
+  transition: all 0.2s ease;
 }
+
+.buttonAnimation:hover {
+  border: none;
+}
+
 .buttonAnimation::after,
 .buttonAnimation::before {
   content: "";
@@ -32,7 +41,7 @@ a {
   height: calc(100% - 6px);
   left: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: -1;
   transition: transform ease 0.3s;
 }
 
@@ -43,6 +52,10 @@ a {
 .buttonAnimation:hover::before {
   transform: translate(5px, 5px);
   /* border: 3px solid hotpink; */
+}
+.buttonAnimation a:focus {
+  outline: none;
+  border: none;
 }
 .container,
 .change {

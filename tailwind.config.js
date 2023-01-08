@@ -5,6 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    zIndex: {
+      neg1: "-1",
+    },
     extend: {},
   },
   plugins: [],

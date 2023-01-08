@@ -31,18 +31,35 @@ export default function Nav() {
             : "hidden"
         }`}
       >
-        <ul className="flex gap-2 flex-col items-center justify-center">
+        <ul className="flex gap-6 flex-col items-center justify-center">
           <li>
-            <a href="#">About me</a>
+            <a className="list-item" href="#">
+              About me
+            </a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a className="list-item" href="#">
+              Projects
+            </a>
           </li>
-          <button>Contact Me</button>
+          <li>
+            <a className="list-item" href="#">
+              Resume
+            </a>
+          </li>
+          <li>
+            <a className="list-item" href="#">
+              Contact
+            </a>
+          </li>
+          {/* <button>Contact Me</button> */}
         </ul>
       </div>
-      <Link className="font-bold text-slate-50" href={"/"}>
-        &lt;R. Mi<span className="text-lime-500">ll</span>er/&gt;
+      <Link
+        className="font-bold text-slate-50 ml-auto text-lg tracking-[.25em]"
+        href={"/"}
+      >
+        &lt;R. Mi<span className="text-lime-300">ll</span>er/&gt;
       </Link>
     </nav>
   )

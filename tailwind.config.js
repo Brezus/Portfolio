@@ -10,9 +10,6 @@ module.exports = {
       20: "20",
       21: "21",
     },
-    height: {
-      teenyHeight: "2",
-    },
     extend: {},
   },
   plugins: [],

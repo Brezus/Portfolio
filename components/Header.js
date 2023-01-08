@@ -3,7 +3,7 @@ import Nav from "./Nav"
 
 export default function Header() {
   return (
-    <header className="bg-[url('../assets/bg4.jpg')] bg-no-repeat bg-cover bg-bottom pt-7">
+    <header className="bg-[url('../assets/bg4.jpg')] bg-no-repeat bg-cover bg-bottom pt-7 relative">
       <Nav />
       <div className="w-11/12 flex flex-col gap-4 text-left pb-56 pt-7 mx-auto">
         <h1 className="text-6xl font-bold mt-16 ">

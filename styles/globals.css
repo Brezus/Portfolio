@@ -19,49 +19,14 @@ a {
   box-sizing: border-box;
 }
 
-.buttonAnimation {
-  color: black;
-  padding: 20px 45px;
-  z-index: 100;
-  width: 100%;
-  border: 3px solid black;
-  transition: all 0.2s ease;
-}
-
-.buttonAnimation:hover {
-  border: none;
-}
-
-.buttonAnimation::after,
-.buttonAnimation::before {
-  content: "";
-  border: 3px solid black;
-  position: absolute;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform ease 0.3s;
-}
-
-.buttonAnimation:hover::after {
-  transform: translate(-5px, -5px);
-  border: 3px solid lime;
-}
-.buttonAnimation:hover::before {
-  transform: translate(5px, 5px);
-  /* border: 3px solid hotpink; */
-}
-.buttonAnimation a:focus {
-  outline: none;
-  border: none;
-}
 .container,
 .change {
   display: inline-block;
   cursor: pointer;
-  flex: 1;
+  padding: 0 0.5em;
+  width: max-content;
+  z-index: 21;
+  position: fixed;
 }
 
 .bar1,
@@ -84,4 +49,8 @@ a {
 
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
+}
+
+.btn {
+  @apply duration-300 ease-in relative block -z-neg1 py-3 border-2 border-solid border-slate-900 rounded outline-none before:transition-all before:duration-500 before:ease-in before:absolute before:top-0 before:left-1/2 before:right-1/2 before:bottom-0 before:opacity-0 before:content-[''] before:bg-slate-900 hover:before:transition-all hover:before:duration-500 hover:before:ease-in hover:before:left-0 hover:before:right-0 hover:before:opacity-100 hover:before:z-neg1 hover:text-white hover:font-bold hover:tracking-widest focus:border-red-400 focus:scale-105 focus:text-red-400;
 }

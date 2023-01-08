@@ -7,6 +7,11 @@ module.exports = {
   theme: {
     zIndex: {
       neg1: "-1",
+      20: "20",
+      21: "21",
+    },
+    height: {
+      teenyHeight: "2",
     },
     extend: {},
   },

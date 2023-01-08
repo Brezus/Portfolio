@@ -1,9 +1,24 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import { useAppContext } from "../context/ProjContext"
+import { nanoid } from "nanoid"
 
 export default function Nav() {
-  const { toggleMenu, setToggleMenu } = useAppContext()
+  const { toggleMenu, setToggleMenu, closeMenu } = useAppContext()
+  const navArray = ["resume", "about", "projects", "contact"]
+  const navListItems = navArray.map((item) => {
+    return (
+      <li key={nanoid()}>
+        <a
+          onClick={closeMenu}
+          className="list-item capitalize"
+          href={`#${item}`}
+        >
+          {item}
+        </a>
+      </li>
+    )
+  })
   return (
     <nav className=" font-light text-gray-700 flex justify-between items-center w-11/12 mx-auto">
       {/* <ul className="flex gap-2">
@@ -32,27 +47,7 @@ export default function Nav() {
         }`}
       >
         <ul className="flex gap-6 flex-col items-center justify-center">
-          <li>
-            <a className="list-item" href="#">
-              About me
-            </a>
-          </li>
-          <li>
-            <a className="list-item" href="#">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a className="list-item" href="#">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a className="list-item" href="#">
-              Contact
-            </a>
-          </li>
-          {/* <button>Contact Me</button> */}
+          {navListItems}
         </ul>
       </div>
       <Link

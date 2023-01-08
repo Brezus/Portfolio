@@ -22,7 +22,10 @@ export default function About() {
   ]
   return (
     <>
-      <article className="pb-8 pt-8 shadow-2xl rounded-lg items-center justify-center bg-gradient-to-r from-white to-slate-200 text-slate-900 w-11/12 mx-auto relative bottom-36 flex flex-wrap gap-5 flex-col-reverse">
+      <article
+        id="about"
+        className="pb-8 pt-8 shadow-2xl rounded-lg items-center justify-center bg-gradient-to-r from-white to-slate-200 text-slate-900 w-11/12 mx-auto relative bottom-36 flex flex-wrap gap-5 flex-col-reverse"
+      >
         <h2 className="absolute left-0 -top-7 font-black text-3xl text-slate-50 tracking-widest">
           About Me
         </h2>

@@ -18,7 +18,7 @@ export default function Projects({ projects }) {
           <h3 className="mb-5 font-bold text-rose-400">{project?.name}</h3>
 
           <div className="gap-5 grid grid-rows-[1fr_auto] w-full ">
-            <p>{project?.description}</p>
+            <p>{project?.shortDescription}</p>
             <img
               className="rounded-lg w-full object-contain h-auto"
               src={urlFor(project.projectImage).url()}

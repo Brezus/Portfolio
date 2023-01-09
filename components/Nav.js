@@ -2,10 +2,11 @@ import React, { useState } from "react"
 import Link from "next/link"
 import { useAppContext } from "../context/ProjContext"
 import { nanoid } from "nanoid"
+import randomGuy from "../assets/rando.png"
+import Image from "next/image"
 
 export default function Nav() {
-  const { toggleMenu, setToggleMenu, closeMenu } = useAppContext()
-  const navArray = ["resume", "about", "projects", "contact"]
+  const { toggleMenu, setToggleMenu, closeMenu, navArray } = useAppContext()
   const navListItems = navArray.map((item) => {
     return (
       <li key={nanoid()}>
@@ -42,12 +43,22 @@ export default function Nav() {
       <div
         className={`${
           toggleMenu
-            ? "block  text-white fixed left-0 z-20 top-0 bottom-0 bg-rose-500 right-0 py-12"
+            ? "block text-white fixed left-0 z-20 top-0 bottom-0 bg-rose-500 right-0"
             : "hidden"
         }`}
       >
-        <ul className="flex gap-6 flex-col items-center justify-center">
+        <ul className="flex gap-6 flex-col items-center justify-center pt-12">
           {navListItems}
+          {/* <div className="w-2/3: flex justify-center items-center absolute bottom-0">
+            <div className="relative">
+              <div className="bd"></div>
+              <Image
+                className="w-full block"
+                src={randomGuy}
+                alt={"a photo of me"}
+              />
+            </div>
+          </div> */}
         </ul>
       </div>
       <Link

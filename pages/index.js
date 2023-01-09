@@ -8,6 +8,7 @@ import About from "../components/About"
 import Header from "../components/Header"
 import { client } from "../lib/client"
 import { ProjContext } from "../context/ProjContext"
+import Footer from "../components/Footer"
 
 export default function Home({ projects }) {
   return (
@@ -23,8 +24,7 @@ export default function Home({ projects }) {
           <About />
           <Projects projects={projects} />
         </main>
-
-        <footer className="w-5/6"></footer>
+        <Footer />
       </ProjContext>
     </div>
   )

@@ -34,6 +34,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'shortDescription',
+      title: 'Short Description',
+      type: 'string',
+    },
+    {
       name: 'motivation',
       title: 'Motivation',
       type: 'string',

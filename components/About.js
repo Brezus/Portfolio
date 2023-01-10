@@ -24,7 +24,7 @@ export default function About() {
     <>
       <article
         id="about"
-        className="pb-8 pt-8 shadow-2xl rounded-lg items-center justify-center bg-gradient-to-r from-white to-slate-200 text-slate-900 w-11/12 mx-auto relative bottom-36 flex flex-wrap gap-5 flex-col-reverse"
+        className="pb-8 pt-8 shadow-2xl rounded-lg items-center justify-center bg-gradient-to-r from-white to-slate-200 text-slate-900 w-11/12 max-w-4xl mx-auto relative bottom-36 flex flex-wrap gap-5 flex-col-reverse md:flex-row"
       >
         <h2 className="absolute left-0 -top-7 font-black text-3xl text-slate-50 tracking-widest">
           About Me
@@ -32,9 +32,9 @@ export default function About() {
         <div className="absolute overflow-hidden shadow-xl h-28 w-28 rounded-full flex items-center -bottom-32">
           <Image src={profPhoto} alt={"a photo of me"} />
         </div>
-        <section className="w-5/6 flex flex-col gap-2 items-center">
+        <section className="w-5/6 flex flex-col gap-2 items-center md:w-2/5">
           <h2 className="font-bold text-2xl text-gray-800">My Skills</h2>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3 ">
             {mySkills.map((skill) => (
               <p
                 className="cursor-auto font-medium px-5 py-2 bg-gradient-to-r from-lime-500 to-lime-600  text-white text-xs md:text-lg rounded shadow-lg"
@@ -45,9 +45,9 @@ export default function About() {
             ))}
           </div>
         </section>
-        <section className="w-5/6 flex flex-col gap-2 items-center">
+        <section className="w-5/6 flex flex-col gap-2 items-center md:w-2/5">
           <h2 className="font-bold text-2xl text-gray-800">Background</h2>
-          <p className="w-4/5 text-base text-slate-500 font-mono">
+          <p className="w-4/5 text-base text-slate-500 font-mono sm:text-lg">
             Completed Scrimba&#39;s Frontend Developer Career Path and several
             other coding challenges online. I have been teaching myself to code
             since 2019 and completed several design and development challenges

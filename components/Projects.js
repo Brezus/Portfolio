@@ -54,17 +54,22 @@ export default function Projects({ projects }) {
             </ul>
           </div>
         </section>
-        <hr className="w-full border-1 border-gray-400 last-of-type:opacity-0" />
+        <hr className="w-full border-1 border-gray-400 last-of-type:opacity-0 md:hidden" />
       </>
     )
   })
   return (
     <article
-      className="bg-slate-100 py-8 flex flex-col justify-center items-center gap-14"
+      className="bg-slate-100 py-8 flex flex-col justify-center items-center gap-14 relative md:flex-row-reverse md:items-start md:gap-0 md:pt-0"
       id={"projects"}
     >
-      <h3 className="font-black text-5xl ">Projects</h3>
-      {projectsHtml}
+      <h3 className="font-black text-5xl md:absolute top-8">Projects</h3>
+      <div className="flex flex-col gap-10 justify-center items-center md:w-full min-h-screen">
+        {projectsHtml}
+      </div>
+      <div className="bg-slate-900 w-1/4 hidden md:block">
+        <p>Hello</p>
+      </div>
     </article>
   )
 }

@@ -6,7 +6,7 @@ const AppContext = createContext()
 export function ProjContext({ children }) {
   const [toggleMenu, setToggleMenu] = useState(false)
   const closeMenu = () => setToggleMenu(false)
-  const navArray = ["resume", "about", "projects", "contact"]
+  const navArray = ["resume", "about", "projects", "contact", "blog"]
 
   return (
     <AppContext.Provider

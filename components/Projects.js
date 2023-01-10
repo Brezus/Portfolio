@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { nanoid } from "nanoid"
 import { urlFor } from "../lib/client"
 import Image from "next/image"
@@ -6,7 +6,6 @@ import Link from "next/link"
 import SkillsButton from "./common/SkillsButton"
 
 export default function Projects({ projects }) {
-  console.log(projects)
   const projectsHtml = projects.map((project) => {
     return (
       <>
@@ -58,17 +57,87 @@ export default function Projects({ projects }) {
       </>
     )
   })
+
+  const projectsHtmlDesk = projects.map((project, i) => {
+    const stack = project.techStack.split(",").map((stack) => (
+      <p className="tech" key={nanoid}>
+        {stack}
+      </p>
+    ))
+    return (
+      <>
+        <section
+          id="projects"
+          className={`${
+            i % 2 === 0
+              ? "flex w-11/12 max-w-6xl items-center justify-between text-left flex-row-reverse"
+              : "flex w-11/12 max-w-6xl items-center justify-between text-left"
+          }`}
+          key={nanoid()}
+        >
+          <div className="w-2/5">
+            <h3 className="mb-5 font-bold text-rose-400 text-4xl">
+              {project?.name}
+            </h3>
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-4 flex-wrap">{stack}</div>
+              <p className="font-mono font-normal">
+                {project?.shortDescription}
+              </p>
+              <ul
+                className={`${
+                  project?.repo
+                    ? "flex justify-between flex-wrap gap-4"
+                    : "flex justify-between"
+                }`}
+              >
+                <li
+                  className={`${
+                    project?.repo
+                      ? "font-semibold w-full"
+                      : "font-semibold w-2/5"
+                  }`}
+                >
+                  <SkillsButton buttonHref={project?.liveSite}>
+                    Live Site
+                  </SkillsButton>
+                </li>
+                <li className="font-semibold w-2/5">
+                  {project?.repo ? (
+                    <SkillsButton buttonHref={project?.repo}>
+                      Github
+                    </SkillsButton>
+                  ) : null}
+                </li>
+
+                <li className="font-semibold w-2/5">
+                  <Link className="btn" href={`details`}>
+                    Details
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            className="rounded-lg w-1/2 object-contain h-auto"
+            src={urlFor(project.projectImage).url()}
+            alt={"project"}
+          />
+        </section>
+      </>
+    )
+  })
   return (
     <article
-      className="bg-slate-100 py-8 flex flex-col justify-center items-center gap-14 relative md:flex-row-reverse md:items-start md:gap-0 md:pt-0"
+      className="bg-slate-100 py-8 flex flex-col justify-center items-center gap-14"
       id={"projects"}
     >
-      <h3 className="font-black text-5xl md:absolute top-8">Projects</h3>
-      <div className="flex flex-col gap-10 justify-center items-center md:w-full min-h-screen">
+      <h3 className="font-black text-6xl">Projects</h3>
+      <div className="flex flex-col gap-10 justify-center items-center md:hidden">
         {projectsHtml}
       </div>
-      <div className="bg-slate-900 w-1/4 hidden md:block">
-        <p>Hello</p>
+      <div className="flex-col justify-center items-center hidden md:flex gap-28">
+        {projectsHtmlDesk}
       </div>
     </article>
   )

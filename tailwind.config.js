@@ -10,7 +10,11 @@ module.exports = {
       20: "20",
       21: "21",
     },
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        projectDesk: "30px 300px",
+      },
+    },
   },
   plugins: [],
 }

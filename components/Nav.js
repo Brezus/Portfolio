@@ -30,7 +30,7 @@ export default function Nav() {
     )
   })
   return (
-    <nav className=" font-light text-gray-700 flex justify-between items-center w-11/12 mx-auto">
+    <nav className=" font-light text-gray-700 flex justify-between items-center w-11/12 mx-auto md:z-21">
       <ul className="gap-4 text-white text-lg font-normal hidden md:flex">
         {navListItemsDesk}
       </ul>

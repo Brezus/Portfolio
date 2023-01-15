@@ -8,11 +8,10 @@ import SkillsButton from "./common/SkillsButton"
 export default function Projects({ projects }) {
   const projectsHtml = projects.map((project) => {
     return (
-      <>
+      <div key={nanoid()}>
         <section
           id="projects"
-          className="flex flex-col justify-center w-11/12 max-w-md"
-          key={nanoid()}
+          className="flex flex-col justify-center w-11/12 max-w-md mx-auto"
         >
           <h3 className="mb-5 font-bold text-rose-400">{project?.name}</h3>
 
@@ -54,13 +53,13 @@ export default function Projects({ projects }) {
           </div>
         </section>
         <hr className="w-full border-1 border-gray-400 last-of-type:opacity-0 md:hidden" />
-      </>
+      </div>
     )
   })
 
   const projectsHtmlDesk = projects.map((project, i) => {
     const stack = project.techStack.split(",").map((stack) => (
-      <p className="tech" key={nanoid}>
+      <p className="tech" key={nanoid()}>
         {stack}
       </p>
     ))
@@ -129,7 +128,7 @@ export default function Projects({ projects }) {
   })
   return (
     <article
-      className="bg-slate-100 py-8 flex flex-col justify-center items-center gap-14"
+      className="bg-slate-100 py-8 md:pb-24 flex flex-col justify-center items-center gap-14"
       id={"projects"}
     >
       <h3 className="font-black text-6xl">Projects</h3>

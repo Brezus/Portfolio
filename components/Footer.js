@@ -32,7 +32,10 @@ export default function Footer() {
   const footerListItems = navArray.map((item) => {
     return (
       <li key={nanoid()}>
-        <a className="" href={`#${item}`}>
+        <a
+          className="hover:text-slate-200 transition-all hover:scale-110 block"
+          href={`#${item}`}
+        >
           {item}
         </a>
       </li>
@@ -48,15 +51,15 @@ export default function Footer() {
           </p>
           <p className="font-mono neutral-col">c 2022 - 2023</p>
         </li>
-        <li className="md:flex-1 w-1/2">
+        <li className="md:flex-1 w-full">
           <p className="font-bold text-xl text-white text-center">links</p>
           <ul className="flex justify-between gap-3 neutral-col">
             {footerListItems}
           </ul>
         </li>
-        <li className="md:flex-1">
+        <li className="md:flex-1 w-full text-center">
           <p className="font-bold text-xl text-white">socials</p>
-          <ul className="flex justify-between neutral-col gap-4">
+          <ul className="flex justify-center neutral-col gap-4 mt-1">
             {footerSocialsItems}
           </ul>
         </li>

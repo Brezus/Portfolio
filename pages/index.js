@@ -9,6 +9,7 @@ import Header from "../components/Header"
 import { client } from "../lib/client"
 import { ProjContext } from "../context/ProjContext"
 import Footer from "../components/Footer"
+import Contact from "../components/Contact"
 
 export default function Home({ projects }) {
   return (
@@ -23,6 +24,7 @@ export default function Home({ projects }) {
         <main className="bg-gray-900 w-full">
           <About />
           <Projects projects={projects} />
+          <Contact />
         </main>
         <Footer />
       </ProjContext>

@@ -82,6 +82,16 @@ a {
 .neutral-col {
   @apply text-neutral-500;
 }
+.contact-p {
+  @apply tracking-wide;
+}
+/* .form-input {
+  @apply transition-all font-medium text-base w-11/12 focus:w-full p-4 border-2 rounded-2xl border-slate-400 outline-none peer focus:border-slate-900 valid:border-lime-500 invalid:border-red-600;
+}
+
+.form-placeholder-span {
+  @apply absolute my-4 px-1 flex items-center top-0 left-5 transition-all duration-200 origin-[0%_0%] bg-none pointer-events-none text-lg font-medium text-slate-500 peer-focus:scale-75 peer-focus:-translate-y-7 peer-focus:bg-white peer-focus:text-slate-900;
+} */
 
 .bd {
   position: absolute;

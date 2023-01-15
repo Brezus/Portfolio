@@ -39,9 +39,9 @@ export default function Nav() {
         className={`${toggleMenu ? "change" : "container"}`}
         onClick={() => setToggleMenu((prev) => !prev)}
       >
-        <div class="bar1 sm:bg-white"></div>
-        <div class="bar2 sm:bg-white"></div>
-        <div class="bar3 sm:bg-white"></div>
+        <div className="bar1 sm:bg-white"></div>
+        <div className="bar2 sm:bg-white"></div>
+        <div className="bar3 sm:bg-white"></div>
       </button>
       <div
         className={`${

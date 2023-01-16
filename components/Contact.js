@@ -6,23 +6,21 @@ export default function Contact() {
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
 
-  console.log(fullName)
-  console.log(email)
   return (
-    <div className=" min-h-screen bg-slate-100">
+    <div className=" min-h-screen bg-slate-100 py-10">
       <div className="bg-[url('../assets/bg2.jpg')] bg-no-repeat bg-cover bg-center py-10">
         <h3 className="text-center text-6xl text-white font-black tracking-widest">
           Contact Me
         </h3>
       </div>
-      <div className="py-8 flex flex-col w-1/2 mx-auto gap-10">
+      <div className="py-8 flex flex-col w-1/2 mx-auto gap-10 md:w-4/5">
         <p className="text-2xl text-left font-black">
           Like my Style?<span className="block">Lets Work together</span>
         </p>
-        <p className="contact-p">email me with formSubmit</p>
-        <div>
+        <p className="contact-p md:text-left">email me with formSubmit</p>
+        <div className="md:flex gap-16">
           <form
-            className="flex flex-col gap-8 items-center"
+            className="flex flex-col gap-8 items-center mb-8 md:w-1/2"
             action="https://formsubmit.co/millerroshane44@gmail.com"
             method="POST"
           >
@@ -76,18 +74,25 @@ export default function Contact() {
               Send Message
             </button>
           </form>
-        </div>
-        <p className="font-black text-2xl">or</p>
-        <div className="flex gap-1 items-center mx-auto">
-          <a
-            className="contact-p hover:tracking-widest transition-all"
-            href="mailto:millerroshane44@gmail.com"
-          >
-            use default mail app
-          </a>
-          <a href="mailto:millerroshane44@gmail.com" className="text-3xl">
-            <BsMailbox2 />
-          </a>
+          <div className="md:flex md:justify-between md:w-1/3">
+            {/* <p className="seperator">or</p> */}
+            <div className="flex md:pt-2 md:flex-col gap-1 md:h-full md:items-center md:w-vs">
+              <div className="md:h-2/6 md:w-vs bg-slate-900"></div>
+              <p className="">or</p>
+              <div className="md:h-2/6 md:w-vs bg-slate-900"></div>
+            </div>
+            <div className="flex gap-1 items-center justify-center md:self-start">
+              <a
+                className="contact-p hover:tracking-widest transition-all"
+                href="mailto:millerroshane44@gmail.com"
+              >
+                use default mail app
+              </a>
+              <a href="mailto:millerroshane44@gmail.com" className="text-3xl">
+                <BsMailbox2 />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

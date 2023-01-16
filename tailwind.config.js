@@ -14,6 +14,12 @@ module.exports = {
       gridTemplateRows: {
         projectDesk: "30px 300px",
       },
+      height: {
+        vs: "1px",
+      },
+      width: {
+        vs: "1px",
+      },
     },
   },
   plugins: [],

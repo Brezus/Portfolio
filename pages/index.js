@@ -13,7 +13,7 @@ import Contact from "../components/Contact"
 
 export default function Home({ projects }) {
   return (
-    <div className="relative text-gray-800 min-h-full bg-rose-300 flex flex-col items-center text-center font-sans">
+    <div className="relative text-gray-800 min-h-full bg-rose-300 flex flex-col items-center text-center font-sans md:text-xl">
       <ProjContext>
         <Head>
           <title>Roshanes Portfolio</title>

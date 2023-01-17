@@ -24,7 +24,7 @@ export default function About() {
     <>
       <article
         id="about"
-        className="pb-8 pt-8 shadow-2xl rounded-lg items-center justify-center bg-gradient-to-r from-white to-slate-200 text-slate-900 w-11/12 max-w-4xl mx-auto relative bottom-36 flex flex-wrap gap-5 flex-col-reverse md:flex-row md:items-start md:gap-0"
+        className="pb-8 pt-8 shadow-2xl rounded-lg items-center justify-center bg-gradient-to-r from-white to-slate-200 text-slate-900 w-11/12 max-w-4xl mx-auto relative bottom-36 flex flex-wrap gap-5 flex-col-reverse md:flex-row md:items-start md:gap-2"
       >
         <h2 className="absolute left-0 -top-7 font-black text-3xl text-slate-50 tracking-widest">
           About Me

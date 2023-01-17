@@ -64,15 +64,14 @@ export default function Projects({ projects }) {
       </p>
     ))
     return (
-      <>
+      <div key={nanoid()} className={"md:text-lg"}>
         <section
           id="projects"
           className={`${
             i % 2 === 0
-              ? "flex w-11/12 max-w-6xl items-center justify-between text-left flex-row-reverse"
-              : "flex w-11/12 max-w-6xl items-center justify-between text-left"
+              ? "flex w-11/12 max-w-6xl items-center justify-between text-left flex-row-reverse mx-auto"
+              : "flex w-11/12 max-w-6xl items-center justify-between text-left mx-auto"
           }`}
-          key={nanoid()}
         >
           <div className="w-2/5">
             <h3 className="mb-5 font-bold text-rose-400 text-4xl">
@@ -123,7 +122,7 @@ export default function Projects({ projects }) {
             alt={"project"}
           />
         </section>
-      </>
+      </div>
     )
   })
   return (

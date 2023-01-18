@@ -7,50 +7,43 @@ import Image from "next/image"
 import { useRouter } from "next/router"
 
 export default function Nav() {
-  const router = useRouter()
+  const { pathname } = useRouter()
   const { toggleMenu, setToggleMenu, closeMenu, navArray } = useAppContext()
   const navListItemsMobile = navArray.map((item) => {
-    return item.toLowerCase() === "resume" && router.pathname != "/" ? (
+    return pathname !== "/" ? (
       <li key={nanoid()}>
-        <a
+        <Link
           onClick={closeMenu}
           className="list-item capitalize"
-          href={`#${item}`}
+          href={`/#${item}`}
         >
           {item}
-        </a>
+        </Link>
       </li>
     ) : (
       <li key={nanoid()}>
-        <a
+        <Link
           onClick={closeMenu}
-          className={`list-item capitalize ${
-            router.pathname != "/" && "hidden"
-          }`}
+          className={`list-item capitalize`}
           href={`#${item}`}
         >
           {item}
-        </a>
+        </Link>
       </li>
     )
   })
   const navListItemsDesk = navArray.map((item) => {
-    return item.toLowerCase() === "resume" && router.pathname != "/" ? (
+    return pathname !== "/" ? (
       <li key={nanoid()}>
-        <a className="list-item-desk capitalize" href={`#${item}`}>
+        <Link className="list-item-desk capitalize" href={`/#${item}`}>
           {item}
-        </a>
+        </Link>
       </li>
     ) : (
       <li key={nanoid()}>
-        <a
-          className={`list-item capitalize ${
-            router.pathname != "/" && "hidden"
-          }`}
-          href={`#${item}`}
-        >
+        <Link className={`list-item capitalize`} href={`#${item}`}>
           {item}
-        </a>
+        </Link>
       </li>
     )
   })

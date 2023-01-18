@@ -3,6 +3,7 @@ import { useAppContext } from "../context/ProjContext"
 import { nanoid } from "nanoid"
 import { BsLinkedin, BsDiscord, BsGithub } from "react-icons/bs"
 import { useRouter } from "next/router"
+import Link from "next/link"
 
 export default function Footer() {
   const router = useRouter()
@@ -34,12 +35,12 @@ export default function Footer() {
   const footerListItems = navArray.map((item) => {
     return (
       <li key={nanoid()}>
-        <a
+        <Link
           className="hover:text-slate-200 transition-all hover:scale-110 block"
-          href={`#${item}`}
+          href={router.pathname !== "/" ? `/#${item}` : `#${item}`}
         >
           {item}
-        </a>
+        </Link>
       </li>
     )
   })
@@ -53,9 +54,7 @@ export default function Footer() {
           </p>
           <p className="font-mono neutral-col">c 2022 - 2023</p>
         </li>
-        <li
-          className={`md:flex-1 w-full ${router.pathname !== "/" && "hidden"}`}
-        >
+        <li className={`md:flex-1 w-full`}>
           <p className="font-bold text-xl text-white text-center">links</p>
           <ul className="flex gap-3 neutral-col justify-center md:flex-col md:items-center lg:flex-row">
             {footerListItems}

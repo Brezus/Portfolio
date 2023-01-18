@@ -4,11 +4,13 @@ import { useAppContext } from "../context/ProjContext"
 import { nanoid } from "nanoid"
 import randomGuy from "../assets/rando.png"
 import Image from "next/image"
+import { useRouter } from "next/router"
 
 export default function Nav() {
+  const router = useRouter()
   const { toggleMenu, setToggleMenu, closeMenu, navArray } = useAppContext()
   const navListItemsMobile = navArray.map((item) => {
-    return (
+    return item.toLowerCase() === "resume" && router.pathname != "/" ? (
       <li key={nanoid()}>
         <a
           onClick={closeMenu}
@@ -18,12 +20,35 @@ export default function Nav() {
           {item}
         </a>
       </li>
+    ) : (
+      <li key={nanoid()}>
+        <a
+          onClick={closeMenu}
+          className={`list-item capitalize ${
+            router.pathname != "/" && "hidden"
+          }`}
+          href={`#${item}`}
+        >
+          {item}
+        </a>
+      </li>
     )
   })
   const navListItemsDesk = navArray.map((item) => {
-    return (
+    return item.toLowerCase() === "resume" && router.pathname != "/" ? (
       <li key={nanoid()}>
         <a className="list-item-desk capitalize" href={`#${item}`}>
+          {item}
+        </a>
+      </li>
+    ) : (
+      <li key={nanoid()}>
+        <a
+          className={`list-item capitalize ${
+            router.pathname != "/" && "hidden"
+          }`}
+          href={`#${item}`}
+        >
           {item}
         </a>
       </li>
@@ -52,16 +77,6 @@ export default function Nav() {
       >
         <ul className="flex gap-6 flex-col items-center justify-center pt-12">
           {navListItemsMobile}
-          {/* <div className="w-2/3: flex justify-center items-center absolute bottom-0">
-            <div className="relative">
-              <div className="bd"></div>
-              <Image
-                className="w-full block"
-                src={randomGuy}
-                alt={"a photo of me"}
-              />
-            </div>
-          </div> */}
         </ul>
       </div>
       <Link

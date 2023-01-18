@@ -45,7 +45,10 @@ export default function Projects({ projects }) {
               </li>
 
               <li className="font-semibold w-2/5">
-                <Link className="btn" href={`details`}>
+                <Link
+                  className="btn"
+                  href={`/details/${project?.slug?.current}`}
+                >
                   Details
                 </Link>
               </li>
@@ -77,7 +80,7 @@ export default function Projects({ projects }) {
             <h3 className="mb-5 font-bold text-rose-400 text-4xl">
               {project?.name}
             </h3>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-8">
               <div className="flex gap-4 flex-wrap">{stack}</div>
               <p className="font-mono font-normal">
                 {project?.shortDescription}
@@ -109,7 +112,10 @@ export default function Projects({ projects }) {
                 </li>
 
                 <li className="font-semibold w-2/5">
-                  <Link className="btn" href={`details`}>
+                  <Link
+                    className="btn"
+                    href={`/details/${project?.slug?.current}`}
+                  >
                     Details
                   </Link>
                 </li>
@@ -127,7 +133,7 @@ export default function Projects({ projects }) {
   })
   return (
     <article
-      className="bg-slate-100 py-8 md:pb-24 flex flex-col justify-center items-center gap-14"
+      className="bg-slate-100 py-8 md:pb-32 flex flex-col justify-center items-center gap-14"
       id={"projects"}
     >
       <h3 className="font-black text-6xl">Projects</h3>

@@ -2,8 +2,10 @@ import React from "react"
 import { useAppContext } from "../context/ProjContext"
 import { nanoid } from "nanoid"
 import { BsLinkedin, BsDiscord, BsGithub } from "react-icons/bs"
+import { useRouter } from "next/router"
 
 export default function Footer() {
+  const router = useRouter()
   const { navArray } = useAppContext()
   const footerSocials = [
     {
@@ -51,7 +53,9 @@ export default function Footer() {
           </p>
           <p className="font-mono neutral-col">c 2022 - 2023</p>
         </li>
-        <li className="md:flex-1 w-full">
+        <li
+          className={`md:flex-1 w-full ${router.pathname !== "/" && "hidden"}`}
+        >
           <p className="font-bold text-xl text-white text-center">links</p>
           <ul className="flex gap-3 neutral-col justify-center md:flex-col md:items-center lg:flex-row">
             {footerListItems}

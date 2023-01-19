@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import SkillsButton from "./common/SkillsButton"
 import { BsMailbox2 } from "react-icons/bs"
+import { useAppContext } from "../context/ProjContext"
 
 export default function Contact() {
+  const { socialItemsContact } = useAppContext()
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
@@ -98,7 +100,7 @@ export default function Contact() {
           </form>
           <div className="md:flex md:justify-between md:w-1/3">
             {/* <p className="seperator">or</p> */}
-            <div className="flex justify-center items-center md:pt-2 md:flex-col gap-6 md:gap-1 md:h-full md:w-vs pb-8">
+            <div className="flex justify-center items-center md:pt-2 md:flex-col gap-6 md:gap-1 md:h-full md:w-vs pb-8 md:mr-4">
               <div className="h-vs w-2/6 md:h-2/6 md:w-vs bg-slate-900"></div>
               <p className="spacer">or</p>
               <div className="h-vs w-2/6 md:h-2/6 md:w-vs bg-slate-900"></div>
@@ -110,9 +112,16 @@ export default function Contact() {
               >
                 use default mail app
               </a>
-              <a href="mailto:millerroshane44@gmail.com" className="text-3xl ">
+              <a
+                href="mailto:millerroshane44@gmail.com"
+                className="text-3xl transition-all hover:scale-110 hover:text-slate-900 text-slate-700"
+              >
                 <BsMailbox2 />
               </a>
+              <div className="w-full flex flex-col gap-2 mt-4">
+                <p className="font-bold text-2xl">other ways to get in touch</p>
+                <ul className="socials-cont">{socialItemsContact}</ul>
+              </div>
             </div>
           </div>
         </div>

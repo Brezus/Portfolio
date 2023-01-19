@@ -35,13 +35,16 @@ export default function Nav() {
   const navListItemsDesk = navArray.map((item) => {
     return pathname !== "/" ? (
       <li key={nanoid()}>
-        <Link className="list-item-desk capitalize" href={`/#${item}`}>
+        <Link
+          className="list-item-desk capitalize md:text-lg"
+          href={`/#${item}`}
+        >
           {item}
         </Link>
       </li>
     ) : (
       <li key={nanoid()}>
-        <Link className={`list-item capitalize`} href={`#${item}`}>
+        <Link className={`list-item capitalize md:text-lg`} href={`#${item}`}>
           {item}
         </Link>
       </li>

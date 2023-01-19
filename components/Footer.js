@@ -1,37 +1,12 @@
 import React from "react"
 import { useAppContext } from "../context/ProjContext"
 import { nanoid } from "nanoid"
-import { BsLinkedin, BsDiscord, BsGithub } from "react-icons/bs"
 import { useRouter } from "next/router"
 import Link from "next/link"
 
 export default function Footer() {
   const router = useRouter()
-  const { navArray } = useAppContext()
-  const footerSocials = [
-    {
-      name: "linkedIn",
-      icon: <BsLinkedin />,
-      url: "https://www.linkedin.com/in/roshane-miller-384416167/",
-    },
-    {
-      name: "discord",
-      icon: <BsDiscord />,
-      url: "discordapp.com/users/roshane#5738",
-    },
-    { name: "github", icon: <BsGithub />, url: "https://github.com/Brezus" },
-  ]
-  //   BsLinkedin, BsDiscord, BsGithub
-  const footerSocialsItems = footerSocials.map((item) => {
-    return (
-      <li
-        className="hover:text-slate-200 transition-all hover:scale-110"
-        key={nanoid()}
-      >
-        <a href={item.url}>{item.icon}</a>
-      </li>
-    )
-  })
+  const { navArray, socialItems } = useAppContext()
   const footerListItems = navArray.map((item) => {
     return (
       <li key={nanoid()}>
@@ -62,9 +37,7 @@ export default function Footer() {
         </li>
         <li className="md:flex-1 w-full text-center">
           <p className="font-bold text-xl text-white">socials</p>
-          <ul className="flex justify-center neutral-col gap-4 mt-1">
-            {footerSocialsItems}
-          </ul>
+          <ul className="socials-cont">{socialItems}</ul>
         </li>
       </ul>
     </footer>

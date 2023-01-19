@@ -9,9 +9,23 @@ export default {
       title: 'Name',
     },
     {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 90,
+      },
+    },
+    {
       name: 'techStack',
       title: 'Tech Stack',
       type: 'string',
+    },
+    {
+      name: 'projectImagePlain',
+      title: 'Project Image Plain',
+      type: 'image',
     },
     {
       name: 'projectImage',

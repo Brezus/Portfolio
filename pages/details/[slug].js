@@ -56,17 +56,19 @@ export default function ProjectDetails({ project }) {
             <h2 className="details-h2">Description</h2>
             <p className="details-p">{description}</p>
           </div>
-          <div>
-            <h2 className="details-h2">Biggest Hurdle</h2>
-            <p className="details-p">{biggestChallenge}</p>
-            <div className="mt-12">
-              <img
-                className="rounded-lg w-full h-full object-cover object-center"
-                src={urlFor(ssOfHurdle).url()}
-                alt={`screenshot of hurdle faced`}
-              />
+          {biggestChallenge && (
+            <div>
+              <h2 className="details-h2">Biggest Hurdle</h2>
+              <p className="details-p">{biggestChallenge}</p>
+              <div className="mt-12">
+                <img
+                  className="rounded-lg w-full h-full object-cover object-center"
+                  src={urlFor(ssOfHurdle).url()}
+                  alt={`screenshot of hurdle faced`}
+                />
+              </div>
             </div>
-          </div>
+          )}
           <div>
             <h2 className="details-h2">FuturePlans</h2>
             <p className="details-p">{FuturePlans}</p>

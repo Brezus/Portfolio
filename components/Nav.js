@@ -60,9 +60,21 @@ export default function Nav() {
         className={`${toggleMenu ? "change" : "container"}`}
         onClick={() => setToggleMenu((prev) => !prev)}
       >
-        <div className="bar1 sm:bg-white"></div>
-        <div className="bar2 sm:bg-white"></div>
-        <div className="bar3 sm:bg-white"></div>
+        <div
+          className={`w-[35px] h-[5px] my-[6px] transition duration-300 ${
+            toggleMenu ? "translate-y-[10px] -rotate-45" : ""
+          } ${pathname !== "/" ? "bg-white" : "bg-gray-700"}  sm:bg-white `}
+        ></div>
+        <div
+          className={`w-[35px] h-[5px] my-[6px] transition duration-300 ${
+            toggleMenu && "hidden"
+          } ${pathname !== "/" ? "bg-white" : "bg-gray-700"}  sm:bg-white `}
+        ></div>
+        <div
+          className={`w-[35px] h-[5px] my-[6px] transition duration-300 ${
+            toggleMenu ? "-translate-y-1 rotate-45" : ""
+          } ${pathname !== "/" ? "bg-white" : "bg-gray-700"}  sm:bg-white `}
+        ></div>
       </button>
       <div
         className={`${

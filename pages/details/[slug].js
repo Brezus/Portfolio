@@ -9,14 +9,20 @@ export default function ProjectDetails({ project }) {
     name,
     description,
     motivation,
+    techStackReasoning,
     FuturePlans,
     liveSite,
     projectImage,
     repo,
+    projectGif,
+    ssOfHurdle,
+    biggestChallenge,
     shortDescription,
     projectImagePlain,
     techStack,
   } = project
+
+  console.log(project)
 
   const stackRendered = techStack
     .split(",")
@@ -36,7 +42,7 @@ export default function ProjectDetails({ project }) {
           <div className="h-80 rounded-lg mb-12">
             <img
               className="rounded-lg w-full h-full object-cover object-center"
-              src={urlFor(projectImagePlain).url()}
+              src={urlFor(projectGif).url()}
               alt={`picture of my ${name} project`}
             />
           </div>
@@ -49,6 +55,17 @@ export default function ProjectDetails({ project }) {
           <div>
             <h2 className="details-h2">Description</h2>
             <p className="details-p">{description}</p>
+          </div>
+          <div>
+            <h2 className="details-h2">Biggest Hurdle</h2>
+            <p className="details-p">{biggestChallenge}</p>
+            <div className="mt-12">
+              <img
+                className="rounded-lg w-full h-full object-cover object-center"
+                src={urlFor(ssOfHurdle).url()}
+                alt={`screenshot of hurdle faced`}
+              />
+            </div>
           </div>
           <div>
             <h2 className="details-h2">FuturePlans</h2>

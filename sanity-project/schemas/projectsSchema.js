@@ -23,13 +23,18 @@ export default {
       type: 'string',
     },
     {
-      name: 'projectImagePlain',
-      title: 'Project Image Plain',
-      type: 'image',
+      name: 'techStackReasoning',
+      title: 'Tech Stack Reasoning',
+      type: 'string',
     },
     {
       name: 'projectImage',
       title: 'Project Image',
+      type: 'image',
+    },
+    {
+      name: 'projectGif',
+      title: 'Project Gif',
       type: 'image',
     },
     {
@@ -41,6 +46,21 @@ export default {
       name: 'projectImageMobile',
       title: 'Project Image Mobile',
       type: 'image',
+    },
+    {
+      name: 'ssOfHurdle',
+      title: 'Ss Of Hurdle',
+      type: 'image',
+    },
+    {
+      name: 'features',
+      title: 'Features',
+      type: 'string',
+    },
+    {
+      name: 'biggestChallenge',
+      title: 'Biggest Challenge',
+      type: 'string',
     },
     {
       name: 'description',

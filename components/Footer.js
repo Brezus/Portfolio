@@ -11,7 +11,7 @@ export default function Footer() {
     return (
       <li key={nanoid()}>
         <Link
-          className="hover:text-slate-200 transition-all hover:scale-110 block"
+          className="text-lime-500 transition-all hover:scale-110 block"
           href={router.pathname !== "/" ? `/#${item}` : `#${item}`}
         >
           {item}

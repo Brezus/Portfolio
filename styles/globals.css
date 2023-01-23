@@ -94,7 +94,7 @@ a {
   @apply flex justify-center neutral-col gap-4 mt-1;
 }
 .details-h1 {
-  @apply text-6xl font-black text-slate-900 mb-6;
+  @apply text-6xl font-black text-slate-900;
 }
 .details-h2 {
   @apply text-3xl font-black md:text-2xl tracking-widest text-slate-900 mb-3;

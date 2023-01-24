@@ -5,12 +5,24 @@ import { nanoid } from "nanoid"
 import randomGuy from "../assets/rando.png"
 import Image from "next/image"
 import { useRouter } from "next/router"
+import useRenderList from "../hooks/useRenderList"
 
 export default function Nav() {
   const { pathname } = useRouter()
   const { toggleMenu, setToggleMenu, closeMenu, navArray } = useAppContext()
   const navListItemsMobile = navArray.map((item) => {
-    return pathname !== "/" ? (
+    return item.toLowerCase() === "resume" ? (
+      <li key={nanoid()}>
+        <Link
+          onClick={closeMenu}
+          className="list-item capitalize"
+          href="https://resume.io/r/bwFS0PXmq"
+          target={"_blank"}
+        >
+          {item}
+        </Link>
+      </li>
+    ) : pathname !== "/" ? (
       <li key={nanoid()}>
         <Link
           onClick={closeMenu}
@@ -33,7 +45,17 @@ export default function Nav() {
     )
   })
   const navListItemsDesk = navArray.map((item) => {
-    return pathname !== "/" ? (
+    return item.toLowerCase() === "resume" ? (
+      <li key={nanoid()}>
+        <Link
+          className="list-item capitalize md:text-lg"
+          href="https://resume.io/r/bwFS0PXmq"
+          target={"_blank"}
+        >
+          {item}
+        </Link>
+      </li>
+    ) : pathname !== "/" ? (
       <li key={nanoid()}>
         <Link
           className="list-item-desk capitalize md:text-lg"
@@ -55,7 +77,6 @@ export default function Nav() {
       <ul className="gap-4 text-white text-lg font-normal hidden md:flex">
         {navListItemsDesk}
       </ul>
-
       <button
         className={`${toggleMenu ? "change" : "container"}`}
         onClick={() => setToggleMenu((prev) => !prev)}

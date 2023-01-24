@@ -52,7 +52,7 @@ export default function ProjectDetails({ project }) {
         <div className="w-11/12 flex flex-col gap-20">
           <div>
             <h1 className="details-h1">{name.replace(/-/g, " ")}</h1>
-            <div className="flex gap-3 font-mono tracking-wide items-center">
+            <div className="flex gap-3 font-mono tracking-wide items-center mt-3">
               <div className="overflow-hidden shadow-xl h-14 w-14 rounded-full flex items-center -bottom-32">
                 <Image src={profPhoto} alt={"a photo of me"} />
               </div>

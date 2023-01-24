@@ -12,7 +12,14 @@ export default function Footer() {
       <li key={nanoid()}>
         <Link
           className="text-lime-500 transition-all hover:scale-110 block"
-          href={router.pathname !== "/" ? `/#${item}` : `#${item}`}
+          href={
+            item.toLowerCase() === "resume"
+              ? "https://resume.io/r/bwFS0PXmq"
+              : router.pathname !== "/"
+              ? `/#${item}`
+              : `#${item}`
+          }
+          target={`${item.toLowerCase() === "resume" ? "_blank" : ""}`}
         >
           {item}
         </Link>

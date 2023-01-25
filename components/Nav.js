@@ -11,33 +11,19 @@ export default function Nav() {
   const { pathname } = useRouter()
   const { toggleMenu, setToggleMenu, closeMenu, navArray } = useAppContext()
   const navListItemsMobile = navArray.map((item) => {
-    return item.toLowerCase() === "resume" ? (
+    return (
       <li key={nanoid()}>
         <Link
           onClick={closeMenu}
           className="list-item capitalize"
-          href="https://resume.io/r/bwFS0PXmq"
-          target={"_blank"}
-        >
-          {item}
-        </Link>
-      </li>
-    ) : pathname !== "/" ? (
-      <li key={nanoid()}>
-        <Link
-          onClick={closeMenu}
-          className="list-item capitalize"
-          href={`/#${item}`}
-        >
-          {item}
-        </Link>
-      </li>
-    ) : (
-      <li key={nanoid()}>
-        <Link
-          onClick={closeMenu}
-          className={`list-item capitalize`}
-          href={`#${item}`}
+          href={
+            item.toLowerCase() === "resume"
+              ? "https://drive.google.com/file/d/1jJ4jh-G8jXuY0clH79UQ7W_kraMjkbI5/view?usp=share_link"
+              : pathname !== "/"
+              ? `/#${item}`
+              : `#${item}`
+          }
+          target={`${item.toLowerCase() === "resume" ? "_blank" : ""}`}
         >
           {item}
         </Link>
@@ -45,28 +31,19 @@ export default function Nav() {
     )
   })
   const navListItemsDesk = navArray.map((item) => {
-    return item.toLowerCase() === "resume" ? (
+    return (
       <li key={nanoid()}>
         <Link
           className="list-item capitalize md:text-lg"
-          href="https://resume.io/r/bwFS0PXmq"
-          target={"_blank"}
+          href={
+            item.toLowerCase() === "resume"
+              ? "https://drive.google.com/file/d/1jJ4jh-G8jXuY0clH79UQ7W_kraMjkbI5/view?usp=share_link"
+              : pathname !== "/"
+              ? `/#${item}`
+              : `#${item}`
+          }
+          target={`${item.toLowerCase() === "resume" ? "_blank" : ""}`}
         >
-          {item}
-        </Link>
-      </li>
-    ) : pathname !== "/" ? (
-      <li key={nanoid()}>
-        <Link
-          className="list-item-desk capitalize md:text-lg"
-          href={`/#${item}`}
-        >
-          {item}
-        </Link>
-      </li>
-    ) : (
-      <li key={nanoid()}>
-        <Link className={`list-item capitalize md:text-lg`} href={`#${item}`}>
           {item}
         </Link>
       </li>

@@ -18,7 +18,9 @@ export default function About() {
     "STYLED COMPONENTS",
     "TAILWIND",
     "FIREBASE",
-    "STRIPE",
+    "PHOTOSHOP",
+    "FIGMA",
+    "VSCODE",
   ]
   return (
     <>
@@ -33,7 +35,9 @@ export default function About() {
           <Image src={profPhoto} alt={"a photo of me"} />
         </div>
         <section className="w-5/6 flex flex-col gap-2 items-center md:items-start md:w-2/5">
-          <h2 className="font-bold text-2xl text-gray-800">My Skills</h2>
+          <h2 className="font-bold text-2xl text-gray-800">
+            My Skills and Tools
+          </h2>
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 ">
             {mySkills.map((skill) => (
               <p className="skill-tech" key={nanoid()}>
@@ -45,10 +49,13 @@ export default function About() {
         <section className="w-5/6 flex flex-col gap-2 items-center md:w-2/5 md:items-start md:text-left">
           <h2 className="font-bold text-2xl text-gray-800">Background</h2>
           <p className="w-4/5 text-base text-slate-500 font-mono sm:text-lg md:w-full">
-            Completed Scrimba&#39;s Frontend Developer Career Path and several
-            other coding challenges online. I have been teaching myself to code
-            since 2019 and completed several design and development challenges
-            on{" "}
+            I have been coding since high school and have a passion for creating
+            functional and visually pleasing websites. In my spare time, I enjoy
+            watching anime and keeping up with the latest trends in web
+            development.Completed Scrimba&#39;s Frontend Developer Career Path
+            and several other coding challenges online. I have been teaching
+            myself to code since 2019 and completed several design and
+            development challenges on{" "}
             <a
               target={"_blank"}
               rel="noreferrer"
@@ -56,7 +63,7 @@ export default function About() {
             >
               frontendmentor.com
             </a>{" "}
-            some of those challenges are featured here in this portfolio.
+            some of which are featured in this portfolio.
           </p>
         </section>
         {/* <section className="w-5/6 flex flex-col gap-2 items-center">

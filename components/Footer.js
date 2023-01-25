@@ -14,7 +14,7 @@ export default function Footer() {
           className="text-lime-500 transition-all hover:scale-110 block"
           href={
             item.toLowerCase() === "resume"
-              ? "https://resume.io/r/bwFS0PXmq"
+              ? "https://drive.google.com/file/d/1jJ4jh-G8jXuY0clH79UQ7W_kraMjkbI5/view?usp=share_link"
               : router.pathname !== "/"
               ? `/#${item}`
               : `#${item}`

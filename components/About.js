@@ -20,7 +20,6 @@ export default function About() {
     "FIREBASE",
     "PHOTOSHOP",
     "FIGMA",
-    "VSCODE",
   ]
   return (
     <>
@@ -35,9 +34,7 @@ export default function About() {
           <Image src={profPhoto} alt={"a photo of me"} />
         </div>
         <section className="w-5/6 flex flex-col gap-2 items-center md:items-start md:w-2/5">
-          <h2 className="font-bold text-2xl text-gray-800">
-            My Skills and Tools
-          </h2>
+          <h2 className="font-bold text-2xl text-gray-800">My Skills</h2>
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 ">
             {mySkills.map((skill) => (
               <p className="skill-tech" key={nanoid()}>
@@ -49,21 +46,22 @@ export default function About() {
         <section className="w-5/6 flex flex-col gap-2 items-center md:w-2/5 md:items-start md:text-left">
           <h2 className="font-bold text-2xl text-gray-800">Background</h2>
           <p className="w-4/5 text-base text-slate-500 font-mono sm:text-lg md:w-full">
-            I have been coding since high school and have a passion for creating
-            functional and visually pleasing websites. In my spare time, I enjoy
-            watching anime and keeping up with the latest trends in web
-            development.Completed Scrimba&#39;s Frontend Developer Career Path
-            and several other coding challenges online. I have been teaching
-            myself to code since 2019 and completed several design and
-            development challenges on{" "}
+            I love colors and being creative so making and building things was
+            always an enjoyable activity for me once i learned what i could do
+            with code such as calling apis for data or creating animations with
+            css i was blown away ever since then in my spare time, I complete
+            coding challenges on{" "}
             <a
+              className="border-b border-lime-500"
               target={"_blank"}
               rel="noreferrer"
               href={"https://www.frontendmentor.io/profile/Brezus"}
             >
-              frontendmentor.com
+              frontendmentor.io
             </a>{" "}
-            some of which are featured in this portfolio.
+            or i go on youtube to learn from the likes of Kevin Powell, Fireship
+            io, Freecodecamp and more and other time i maybe just watch anime
+            😀.
           </p>
         </section>
         {/* <section className="w-5/6 flex flex-col gap-2 items-center">

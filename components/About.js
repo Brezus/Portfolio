@@ -47,9 +47,9 @@ export default function About() {
           <h2 className="font-bold text-2xl text-gray-800">Background</h2>
           <p className="w-4/5 text-base text-slate-500 font-mono sm:text-lg md:w-full">
             I love colors and being creative so making and building things was
-            always an enjoyable activity for me once i learned what i could do
+            always an enjoyable activity for me once I learned what I could do
             with code such as calling apis for data or creating animations with
-            css i was blown away ever since then in my spare time, I complete
+            css I was blown away ever since then in my spare time, I complete
             coding challenges on{" "}
             <a
               className="border-b border-lime-500"
@@ -59,9 +59,8 @@ export default function About() {
             >
               frontendmentor.io
             </a>{" "}
-            or i go on youtube to learn from the likes of Kevin Powell, Fireship
-            io, Freecodecamp and more and other time i maybe just watch anime
-            😀.
+            or I go on youtube to learn from the likes of Kevin Powell, Fireship
+            io, Freecodecamp and more and other times I watch anime 😀.
           </p>
         </section>
         {/* <section className="w-5/6 flex flex-col gap-2 items-center">

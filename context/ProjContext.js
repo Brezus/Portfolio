@@ -18,7 +18,7 @@ export function ProjContext({ children }) {
     {
       name: "discord",
       icon: <BsDiscord />,
-      url: "discordapp.com/users/roshane#5738",
+      url: "https://discord.com/users/roshane#5738",
     },
     { name: "github", icon: <BsGithub />, url: "https://github.com/Brezus" },
   ]

@@ -17,11 +17,13 @@ export default function Projects({ projects }) {
 
           <div className="gap-5 grid grid-rows-[1fr_auto] w-full ">
             <p>{project?.shortDescription}</p>
-            <img
-              className="rounded-lg w-full object-contain h-auto"
-              src={urlFor(project.projectImage).url()}
-              alt={"project"}
-            />
+            <Link href={`/details/${project?.slug?.current}`}>
+              <img
+                className="rounded-lg w-full object-contain h-auto"
+                src={urlFor(project.projectImage).url()}
+                alt={"project"}
+              />
+            </Link>
             <ul
               className={`${
                 project?.repo
@@ -72,8 +74,8 @@ export default function Projects({ projects }) {
           id="projects"
           className={`${
             i % 2 === 0
-              ? "flex w-11/12 max-w-6xl items-center justify-between text-left flex-row-reverse mx-auto"
-              : "flex w-11/12 max-w-6xl items-center justify-between text-left mx-auto"
+              ? "flex w-11/12 max-w-6xl items-center justify-around overflow-hidden text-left flex-row-reverse mx-auto"
+              : "flex w-11/12 max-w-6xl items-center justify-around overflow-hidden text-left mx-auto"
           }`}
         >
           <div className="w-2/5">
@@ -122,11 +124,30 @@ export default function Projects({ projects }) {
               </ul>
             </div>
           </div>
-          <img
-            className="rounded-lg w-1/2 object-contain h-auto"
-            src={urlFor(project.projectImage).url()}
-            alt={"project"}
-          />
+          <Link
+            className="w-1/2 group"
+            href={`/details/${project?.slug?.current}`}
+          >
+            {/* <img
+              className="rounded-lg w-full object-contain h-auto"
+              src={urlFor(project.projectImage).url()}
+              alt={"project"}
+            /> */}
+            <div className="relative">
+              <img
+                className="rounded-lg w-full object-contain h-auto"
+                src={urlFor(project?.projectImageDesktop)?.url()}
+                alt={"project"}
+              />
+              <div className="w-[50%] h-[30%] absolute left-[65%] bottom-[20%] group-hover:rotate-12 transition-transform">
+                <img
+                  className="rounded-lg object-contain h-full w-full"
+                  src={urlFor(project?.projectImageMobile)?.url()}
+                  alt={"project"}
+                />
+              </div>
+            </div>
+          </Link>
         </section>
       </div>
     )
@@ -137,7 +158,7 @@ export default function Projects({ projects }) {
       id={"projects"}
     >
       <h3 className="font-black text-6xl">Projects</h3>
-      <div className="flex flex-col gap-10 justify-center items-center md:hidden">
+      <div className="flex flex-col gap-14 justify-center items-center md:hidden pb-12">
         {projectsHtml}
       </div>
       <div className="flex-col justify-center items-center hidden md:flex gap-28">

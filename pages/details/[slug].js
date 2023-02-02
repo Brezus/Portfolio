@@ -51,9 +51,9 @@ export default function ProjectDetails({ project }) {
       </Head>
       <div className="text-left pt-16 py-24 flex flex-col justify-center items-center max-w-4xl mx-auto">
         <div className="w-11/12 flex flex-col gap-20">
-          <div>
+          <div className="grid gap-6">
             <h1 className="details-h1">{name.replace(/-/g, " ")}</h1>
-            <div className="flex gap-3 font-mono tracking-wide items-center mt-3">
+            <div className="flex gap-5 font-mono tracking-wide items-center mt-3">
               <div className="overflow-hidden shadow-xl h-14 w-14 rounded-full flex items-center -bottom-32">
                 <Image src={profPhoto} alt={"a photo of me"} />
               </div>
@@ -69,11 +69,12 @@ export default function ProjectDetails({ project }) {
             <img
               height={"600px"}
               width={"100%"}
-              className="rounded-lg w-full h-full object-cover object-center"
+              className="rounded-lg w-full h-full object-cover object-center -mb-10"
               src={urlFor(projectImage).url()}
               alt={`picture of my ${name} project`}
             />
           </div>
+
           {motivation && (
             <div>
               <h2 className="details-h2">Motivation</h2>
@@ -99,7 +100,7 @@ export default function ProjectDetails({ project }) {
             <div>
               <h2 className="details-h2">Biggest Hurdle</h2>
               <p className="details-p">{biggestChallenge}</p>
-              <div className="mt-16 relative">
+              <div className="mt-20 relative">
                 <Image
                   className="object-contain h-24 w-24 absolute right-0 top-[-74px]"
                   src={avatar}

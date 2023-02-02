@@ -4,6 +4,7 @@ import Head from "next/head"
 import { urlFor } from "../../lib/client"
 import { nanoid } from "nanoid"
 import profPhoto from "../../assets/me3.jpeg"
+import avatar from "../../assets/avatar2.png"
 import Image from "next/image"
 import Link from "next/link"
 import { AiFillUpCircle } from "react-icons/ai"
@@ -98,7 +99,12 @@ export default function ProjectDetails({ project }) {
             <div>
               <h2 className="details-h2">Biggest Hurdle</h2>
               <p className="details-p">{biggestChallenge}</p>
-              <div className="mt-12">
+              <div className="mt-16 relative">
+                <Image
+                  className="object-contain h-24 w-24 absolute right-0 top-[-74px]"
+                  src={avatar}
+                  alt={"pixelated avatar of me"}
+                />
                 <img
                   className="rounded-lg w-full h-full object-cover object-center"
                   src={urlFor(ssOfHurdle).url()}
@@ -116,7 +122,6 @@ export default function ProjectDetails({ project }) {
               src={vector}
               alt={"a photo of me"}
             />
-
             <p className="details-p">{FuturePlans}</p>
           </div>
         </div>

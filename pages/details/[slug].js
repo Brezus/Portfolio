@@ -61,20 +61,20 @@ export default function ProjectDetails({ project }) {
                   roshane mi<span className="text-lime-600">ll</span>er
                 </span>
               </p>
-              <p className="font-medium">
+              <p className="sm:font-medium">
                 live site &#128187;:{" "}
                 <Link
-                  className="text-rose-700 font-extrabold hover:tracking-widest transition-all text-xl"
+                  className="text-rose-700 font-extrabold hover:tracking-widest transition-all sm:text-xl"
                   target={"_blank"}
                   href={liveSite}
                 >
                   {liveSite}
                 </Link>
               </p>
-              <p className="font-medium">
+              <p className="sm:font-medium">
                 repo &#128214;:{" "}
                 <Link
-                  className="text-rose-700 font-extrabold hover:tracking-widest transition-all text-xl"
+                  className="text-rose-700 font-extrabold hover:tracking-widest transition-all sm:text-xl"
                   target={"_blank"}
                   href={repo}
                 >

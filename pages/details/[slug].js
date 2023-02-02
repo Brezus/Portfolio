@@ -53,15 +53,35 @@ export default function ProjectDetails({ project }) {
         <div className="w-11/12 flex flex-col gap-20">
           <div className="grid gap-6">
             <h1 className="details-h1">{name.replace(/-/g, " ")}</h1>
-            <div className="flex gap-5 font-mono tracking-wide items-center mt-3">
+            <div className="flex flex-wrap gap-5 font-mono tracking-wide items-center mt-3">
               <div className="overflow-hidden shadow-xl h-14 w-14 rounded-full flex items-center -bottom-32">
                 <Image src={profPhoto} alt={"a photo of me"} />
               </div>
-              <p>
+              <p className="w-1/2">
                 made by :{" "}
                 <span className="block tracking-widest font-black text-lg">
                   roshane mi<span className="text-lime-600">ll</span>er
                 </span>
+              </p>
+              <p className="font-medium">
+                live site &#128187;:{" "}
+                <Link
+                  className="text-rose-700 font-extrabold hover:tracking-widest transition-all text-xl"
+                  target={"_blank"}
+                  href={liveSite}
+                >
+                  {liveSite}
+                </Link>
+              </p>
+              <p className="font-medium">
+                repo &#128214;:{" "}
+                <Link
+                  className="text-rose-700 font-extrabold hover:tracking-widest transition-all text-xl"
+                  target={"_blank"}
+                  href={repo}
+                >
+                  {repo}
+                </Link>
               </p>
             </div>
           </div>

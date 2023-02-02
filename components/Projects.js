@@ -154,10 +154,10 @@ export default function Projects({ projects }) {
   })
   return (
     <article
-      className="bg-slate-100 py-8 md:pb-16x flex flex-col justify-center items-center gap-14"
+      className="bg-slate-100 py-36 lg:py-24 md:pb-16x flex flex-col justify-center items-center gap-14 relative"
       id={"projects"}
     >
-      <h3 className="font-black text-6xl lg:-mb-20">Projects</h3>
+      <h3 className="font-black text-6xl absolute top-9">Projects</h3>
       <div className="flex flex-col gap-14 justify-center items-center md:hidden pb-12">
         {projectsHtml}
       </div>

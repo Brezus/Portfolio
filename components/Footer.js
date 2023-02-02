@@ -38,7 +38,7 @@ export default function Footer() {
         </li>
         <li className={`md:flex-1 w-full`}>
           <p className="font-bold text-xl text-white text-center">links</p>
-          <ul className="flex gap-3 neutral-col justify-center md:flex-col md:items-center lg:flex-row">
+          <ul className="flex gap-5 neutral-col justify-center md:flex-col md:items-center lg:flex-row">
             {footerListItems}
           </ul>
         </li>

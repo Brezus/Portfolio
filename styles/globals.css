@@ -11,6 +11,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: rgb(17 24 39); /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(251, 113, 113); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(17 24 39); /* creates padding around scroll thumb */
+}
 
 a {
   color: inherit;

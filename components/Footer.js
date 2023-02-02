@@ -27,7 +27,7 @@ export default function Footer() {
     )
   })
   return (
-    <footer className="w-full bg-neutral-900 text-slate-50 py-20">
+    <footer className="w-full bg-gray-900 text-slate-50 py-20">
       <ul className="flex justify-between w-11/12 text-left mx-auto flex-wrap gap-5">
         <li className="w-full md:w-auto text-center md:flex-1">
           <p className="font-bold text-xl text-white">Roshane Miller</p>
@@ -36,7 +36,7 @@ export default function Footer() {
           </p>
           <p className="font-mono neutral-col">© 2022 - 2023</p>
         </li>
-        <li className={`md:flex-1 w-full`}>
+        <li className={`md:flex-[2] w-full`}>
           <p className="font-bold text-xl text-white text-center">links</p>
           <ul className="flex gap-5 neutral-col justify-center md:flex-col md:items-center lg:flex-row">
             {footerListItems}

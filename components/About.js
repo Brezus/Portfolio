@@ -17,7 +17,6 @@ export default function About() {
     "GITHUB",
     "STYLED COMPONENTS",
     "TAILWIND",
-    "FIREBASE",
     "PHOTOSHOP",
     "FIGMA",
   ]

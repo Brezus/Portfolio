@@ -133,13 +133,13 @@ export default function Projects({ projects }) {
               src={urlFor(project.projectImage).url()}
               alt={"project"}
             /> */}
-            <div className="relative">
+            <div className="relative group-hover:scale-105 transition-transform duration-700">
               <img
                 className="rounded-lg w-full object-contain h-auto"
                 src={urlFor(project?.projectImageDesktop)?.url()}
                 alt={"project"}
               />
-              <div className="w-[50%] h-[30%] absolute left-[65%] bottom-[20%] group-hover:rotate-12 transition-transform">
+              <div className="w-[50%] h-[30%] absolute left-[65%] bottom-[20%] group-hover:rotate-12 transition-transform delay-150">
                 <img
                   className="rounded-lg object-contain h-full w-full"
                   src={urlFor(project?.projectImageMobile)?.url()}
@@ -154,14 +154,14 @@ export default function Projects({ projects }) {
   })
   return (
     <article
-      className="bg-slate-100 py-8 md:pb-16 flex flex-col justify-center items-center gap-14"
+      className="bg-slate-100 py-8 md:pb-16x flex flex-col justify-center items-center gap-14"
       id={"projects"}
     >
-      <h3 className="font-black text-6xl">Projects</h3>
+      <h3 className="font-black text-6xl lg:-mb-20">Projects</h3>
       <div className="flex flex-col gap-14 justify-center items-center md:hidden pb-12">
         {projectsHtml}
       </div>
-      <div className="flex-col justify-center items-center hidden md:flex gap-28 md:gap-10">
+      <div className="flex-col justify-center items-center hidden md:flex gap-28 md:gap-10 lg:gap-0">
         {projectsHtmlDesk}
       </div>
     </article>

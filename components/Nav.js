@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import { useAppContext } from "../context/ProjContext"
 import { nanoid } from "nanoid"
@@ -6,10 +6,17 @@ import randomGuy from "../assets/rando.png"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import useRenderList from "../hooks/useRenderList"
+import useWindowSize from "../hooks/useWindowSize"
 
 export default function Nav() {
   const { pathname } = useRouter()
   const { toggleMenu, setToggleMenu, closeMenu, navArray } = useAppContext()
+  const { width } = useWindowSize()
+  useEffect(() => {
+    if (width > 768) {
+      closeMenu()
+    }
+  }, [width])
   const navListItemsMobile = navArray.map((item) => {
     return (
       <li key={nanoid()}>

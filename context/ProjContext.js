@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState, useEffect } from "react"
 import { BsLinkedin, BsDiscord, BsGithub } from "react-icons/bs"
 import { nanoid } from "nanoid"
 import SocialList from "../components/common/SocialList"

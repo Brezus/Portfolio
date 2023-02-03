@@ -25,7 +25,7 @@ export default function Nav() {
           className="list-item capitalize"
           href={
             item.toLowerCase() === "resume"
-              ? "https://drive.google.com/file/d/1jJ4jh-G8jXuY0clH79UQ7W_kraMjkbI5/view?usp=share_link"
+              ? "https://docs.google.com/document/d/1CGVbqqJJFjtXyByBq8V49l0kqL3YGjic/edit?usp=share_link&ouid=110242115225325932551&rtpof=true&sd=true"
               : pathname !== "/"
               ? `/#${item}`
               : `#${item}`
@@ -44,7 +44,7 @@ export default function Nav() {
           className="list-item capitalize md:text-lg"
           href={
             item.toLowerCase() === "resume"
-              ? "https://drive.google.com/file/d/1jJ4jh-G8jXuY0clH79UQ7W_kraMjkbI5/view?usp=share_link"
+              ? "https://docs.google.com/document/d/1CGVbqqJJFjtXyByBq8V49l0kqL3YGjic/edit?usp=share_link&ouid=110242115225325932551&rtpof=true&sd=true"
               : pathname !== "/"
               ? `/#${item}`
               : `#${item}`

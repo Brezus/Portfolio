@@ -147,7 +147,7 @@ export default function ProjectDetails({ project }) {
       </div>
       <button
         className={`fixed right-5 top-2/3  text-lime-600 ${
-          scrollPosition > 1300 ? "block" : "hidden"
+          scrollPosition > 1300 ? "block animate-bounce" : "hidden"
         }`}
         onClick={() => {
           if (window && window !== "undefined")

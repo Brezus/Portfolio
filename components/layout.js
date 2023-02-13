@@ -8,7 +8,7 @@ import { useRouter } from "next/router"
 
 export default function layout({ children }) {
   return (
-    <div className="relative text-gray-800 min-h-full bg-rose-300 flex flex-col items-center text-center font-sans md:text-xl">
+    <div className="relative text-gray-800 min-h-full bg-gray-800 flex flex-col items-center text-center font-sans md:text-xl">
       <ProjContext>
         <Head>
           <title>Roshanes Portfolio</title>

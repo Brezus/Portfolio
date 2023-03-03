@@ -7,6 +7,7 @@ import Link from "next/link"
 export default function Footer() {
   const router = useRouter()
   const { navArray, socialItems } = useAppContext()
+  let currentYear = new Date().getFullYear()
   const footerListItems = navArray.map((item) => {
     return (
       <li key={nanoid()}>
@@ -34,7 +35,7 @@ export default function Footer() {
           <p className="font-mono neutral-col">
             created and developed with care
           </p>
-          <p className="font-mono neutral-col">© 2022 - 2023</p>
+          <p className="font-mono neutral-col">© 2022 - {currentYear}</p>
         </li>
         <li className={`md:flex-[2] w-full`}>
           <p className="font-bold text-xl text-white text-center">links</p>
